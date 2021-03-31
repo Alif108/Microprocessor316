@@ -1,0 +1,60 @@
+INCLUDE 'EMU8086.INC'
+.MODEL SMALL
+
+
+.STACK 100H
+
+
+.DATA
+CR EQU 0DH
+LF EQU 0AH
+
+CHAR DB ?
+COMP DB ?  
+
+.CODE
+
+MAIN PROC
+	;DATA SEGMENT INITIALIZATION
+    MOV AX, @DATA
+    MOV DS, AX  
+           
+    ;TAKING INPUT
+    PRINT 'UPPERCASE LETTER INPUT: '       
+    MOV AH, 1
+    INT 21H
+    MOV CHAR, AL
+    MOV COMP, AL
+    
+    
+    PRINTN
+    
+    ;OUTPUT PREVIOUS LETTER IN LOWERCASE
+    ADD CHAR, 31D
+    
+    PRINT 'PREVIOUS LOWERCASE LETTER: ' 
+    MOV AH, 2
+    MOV DL, CHAR
+    INT 21H   
+    
+    PRINTN 
+          
+          
+    
+    ;OUTPUT ONE'S COMPLEMENT
+    
+    MOV BL, 255
+    SUB BL, COMP
+    
+    PRINT 'ONES COMPLEMENT: '
+    MOV AH, 2
+    MOV DL, BL
+    INT 21H
+    
+            
+    ;DOS EXIT
+    MOV AH, 4CH
+    INT 21H
+
+MAIN ENDP
+END MAIN
