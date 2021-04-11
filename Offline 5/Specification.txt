@@ -1,0 +1,1 @@
+Display the letter "G" in an 8x8 LED Matrix. When pushing an SPST switch, the letter should move to the left. Use interrupts to toggle between Static and Dynamic Mode.
