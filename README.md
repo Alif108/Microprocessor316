@@ -13,10 +13,10 @@
 ### Array, String, and Recursion using Assembly Language Programming
 
 ## Offline 5
-### Atmega32 simultaion -- Using interrupt to display letter on 8x8 LED matrix
+### Atmega32 simulation -- Using interrupt to display letter on 8x8 LED matrix
 
 ## Offline 6
-### Atmega32 simultaion -- Using ADC conversion
+### Atmega32 simulation -- Using ADC conversion
 
 ## Practice Class
-### Atmega32 simultaion -- Implementing a Ring Counter
+### Atmega32 simulation -- Implementing a Ring Counter
